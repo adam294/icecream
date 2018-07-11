@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=480, height=853, initial-scale=1, maximum-scale=1">
-  <title>Sliding Push Navigation Menu Demo</title>
+  <title>Past Orders</title>
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
   <style>
@@ -110,71 +110,6 @@
       z-index: 1;
       transition: all 300ms ease-in-out;
     }
-
-    /* -- Media Queries -- */
-
-    @media (max-width: 991px) {
-
-      .content-container {
-        max-width: 480px;
-      }
-
-    }
-
-    @media (max-width: 767px) {
-
-      .content-container {
-        max-width: 100%;
-        margin: 30px auto 0;
-      }
-
-      #menu-toggle:checked~.content-container {
-        padding-left: 0;
-      }
-
-      .slideout-sidebar ul {
-        text-align: center;
-        max-width: 200px;
-        margin: 30px auto 0;
-      }
-
-      .menu-icon {
-        left: 20px
-      }
-
-      #menu-toggle:checked~.slideout-sidebar {
-        width: 100%;
-      }
-
-      #menu-toggle:checked+.menu-icon {
-        left: 87%;
-        color: #fafafa;
-      }
-
-      @media screen and (max-width: 736px) and (orientation: landscape) {
-
-        .slideout-sidebar {
-          padding: 0;
-        }
-
-        .slideout-sidebar ul {
-          max-width: 100%;
-          margin: 60px auto 0;
-        }
-
-        .slideout-sidebar ul li {
-          display: inline-block;
-          border-bottom: 0;
-          width: 72px;
-          padding: 18px 24px;
-          margin: 0 6px 12px;
-          color: #ffffff;
-          background-color: #777;
-        }
-
-      }
-
-    }
   </style>
 </head>
 
@@ -191,19 +126,25 @@
         </div>
     </div>
     <div class="content">
-      <button class="accordion">Section 1</button>
+      <button class="accordion">Order on July 9, 2018 at 4:51 pm</button>
       <div class="panel">
-        <p>Lorem ipsum...</p>
+        <p>You requested Truck #406. You ordered (food), which came out to $15.24.</p>
+        <button type="button">Menu</button>
+        <button type="button">Request Again</button>
       </div>
       
-      <button class="accordion">Section 2</button>
+      <button class="accordion">Order on July 4, 2018 at 7:11 pm</button>
       <div class="panel">
-        <p>Lorem ipsum...</p>
+        <p>You requested Truck #420. You ordered (food), which came out to $6.90.</p>
+        <button type="button">Menu</button>
+        <button type="button">Request Again</button>
       </div>
       
-      <button class="accordion">Section 3</button>
+      <button class="accordion">Order on June 30, 2018 at 6:29 pm</button>
       <div class="panel">
-        <p>Lorem ipsum...</p>
+        <p>You requested Truck #12. You ordered (food), which came out to $9.67.</p>
+        <button type="button">Menu</button>
+        <button type="button">Request Again</button>
       </div>
     </div>
   </div>
