@@ -1,0 +1,248 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=480, height=853, initial-scale=1, maximum-scale=1">
+  <title>Settings</title>
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+  <style>
+    body {
+      font-family: 'Roboto Condensed', arial, sans-serif;
+      margin: 0;
+      background-color: #fafafa;
+      height: 853px;
+      width: 480px;
+      overflow: hidden;
+    }
+
+    .no-overflow {
+      height: 853px;
+      max-height: 853px;
+      width: 480px;
+      max-width: 480px;
+      overflow: hidden;
+    }
+
+    .topnav input[type=text] {
+      float: right;
+      padding: 6px;
+      border: none;
+      margin-top: 8px;
+      margin-right: 16px;
+      margin-bottom: 8px;
+      font-size: 17px;
+    }
+
+    .topnav {
+      overflow: hidden;
+      background-color: #e9e9e9;
+      padding: 0px 20px;
+      margin: 20px 20px 0;
+    }
+
+    /* Style the buttons that are used to open and close the accordion panel */
+    .accordion {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+        vertical-align: middle;
+        font-size: 1.2rem;
+    }
+
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    .active, .accordion:hover {
+        background-color: #ccc;
+    }
+
+    /* Style the accordion panel. Note: hidden by default */
+    .panel {
+      padding: 0 18px;
+      background-color: white;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+    }
+    /* -- main content -- */
+
+    .content-container {
+      position: relative;
+      z-index: 0;
+      margin: 0 auto;
+      overflow: hidden;
+      transition: all 300ms ease-in-out;
+      background-color: cornflowerblue;
+      height: 100%;
+      width: 100%;
+      background-size: auto;
+      text-align: center;
+    }
+
+    .site-title {
+      text-align: right;
+      margin-bottom: 24px;
+    }
+
+    .site-title h1 {
+      font-weight: 300;
+      text-transform: uppercase;
+      font-size: 14pt;
+      margin-right: 8px;
+      /* letter-spacing: 10px; */
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    .content p {
+      line-height: 1.6em;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    #menu-toggle {
+      display: none;
+    }
+
+    .menu-icon {
+      position: absolute;
+      top: 29px;
+      left: 30px;
+      font-size: 24px;
+      z-index: 1;
+      transition: all 300ms ease-in-out;
+    }
+
+    /* The switch - the box around the slider */
+    .switch {
+      position: relative;
+      width: 50px;
+      height: 24px;
+      float: right;
+    }
+
+    /* Hide default HTML checkbox */
+    .switch input {display:none;}
+
+    /* The slider */
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #aaa;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    input:checked + .slider {
+      background-color: #2196F3;
+    }
+
+    input:focus + .slider {
+      box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked + .slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+      border-radius: 24px;
+    }
+
+    .slider.round:before {
+      border-radius: 50%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <input type="checkbox" id="menu-toggle" />
+  <label for="menu-toggle" class="menu-icon">
+    <a href="index.html" style="text-decoration: none; color: black;"><i class="fa fa-arrow-left"></i></a>
+  </label>
+  <div class="content-container">
+    <div class="site-title">
+        <div class="topnav">
+            <h1>Settings</h1>
+        </div>
+    </div>
+    <div class="content">
+      <button class="accordion">Live Tracking <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label></button>
+      <div class="panel">
+        <p>Enables live tracking of your location.</p>
+      </div>
+
+      <button class="accordion">Push Notifications <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label></button>
+      <div class="panel">
+        <p>Enables push notifications.</p>
+      </div>
+
+      <button class="accordion">Show Unavailable Trucks <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label></button>
+      <div class="panel">
+        <p>Shows on map trucks that cannot be requested.</p>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>
