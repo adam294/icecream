@@ -15,6 +15,15 @@
       background-color: #fafafa;
       height: 853px;
       width: 480px;
+      overflow: hidden;
+    }
+
+    .no-overflow {
+      height: 853px;
+      max-height: 853px;
+      width: 480px;
+      max-width: 480px;
+      overflow: hidden;
     }
 
     .topnav input[type=text] {
@@ -28,8 +37,10 @@
     }
 
     .topnav {
-        overflow: hidden;
-        background-color: #e9e9e9;
+      overflow: hidden;
+      background-color: #e9e9e9;
+      padding: 0px 20px;
+      margin: 20px 20px 0;
     }
 
     /* Style the buttons that are used to open and close the accordion panel */
@@ -57,19 +68,16 @@
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.2s ease-out;
-      text-align: left;
     }
     /* -- main content -- */
 
     .content-container {
       position: relative;
       z-index: 0;
-      padding: 20px;
-      max-width: 728px;
       margin: 0 auto;
       overflow: hidden;
       transition: all 300ms ease-in-out;
-      background-color: dimgray;
+      background-color: cornflowerblue;
       height: 100%;
       width: 100%;
       background-size: auto;
@@ -91,6 +99,10 @@
 
     img {
       width: 100%;
+    }
+
+    .content {
+      padding: 20px;
     }
 
     .content p {
